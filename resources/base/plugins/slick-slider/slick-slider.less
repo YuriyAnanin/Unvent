@@ -1,0 +1,105 @@
+.js_title_slider {
+  &.slick-initialized {
+    .main__slide-wrap+.main__slide-wrap {
+      display: block !important;  
+    }
+  }
+}
+
+.slick-slide{
+  outline: none;
+}
+
+.slick-arrow{ 
+  opacity: 1;
+
+  &:before {
+    top: 50%;
+    border: solid @c-text;
+    border-width: 0 0.2vw 0.2vw 0;
+    width: 1vw;
+    height: 1vw;
+    transition: .3s;
+    opacity: 1;
+  }
+
+  &:hover, &:focus{
+    &:before {
+      border-color: @c-btn-blue-hov;
+    }
+  }
+}
+
+.slick-prev{
+  left: -1.81vw;
+
+  &:before{
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+}
+
+.slick-next {
+  right: -1.31vw;
+
+  &:before {
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.slick-prev,
+.slick-next {
+  top: 43%;
+  height: 2vw;
+  
+  width: 2vw;
+
+  &:before{
+    font-size: 2vw;
+  }
+
+  &:hover,
+  &:focus {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &.slick-disabled:before {
+    opacity: 1;
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  opacity: 1;
+}
+
+@media all and (max-width:@screen-width-s) {
+  .slick-arrow{
+    &:before{
+      border-width: 0 3px 3px 0;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    height: 30px;
+    width: 30px;
+
+    &:before {
+      font-size: 20px; 
+    }
+  }
+
+  .slick-prev {
+    left: -25px;
+  }
+
+  .slick-next {
+    right: -25px;
+  }
+}

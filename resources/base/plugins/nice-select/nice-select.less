@@ -1,0 +1,75 @@
+.nice-select{
+  float: none;
+  height: 50px;
+  display: flex !important;
+  align-items: center;
+  padding: 11px 10px;
+  font-size: inherit;
+  line-height: 1;
+  // border: none;
+  border-radius: 0;
+  background-color: @c-main-gray;
+  color: inherit;
+  transition: none;
+
+  &:hover{
+    // box-shadow: 0 0 0 2px @c-main-yellow;
+    border-color: transparent;
+
+    &::after{
+      border-top-color: @c-minor-gray;
+    }
+  }
+
+  &.is-error{
+
+    &:focus {
+      padding: 12.5px 9px 9.5px;
+
+      .nice-select&{
+        &::after {
+          margin-top: -5px;
+          right: 11px;
+        }
+      }
+    }
+  }
+
+  &::after{
+    width: 0;
+    height: 0;
+    transform: none !important;
+    border: 8px solid transparent;
+    border-top: 12px solid @c-minor-gray;
+    transition: none;
+  }
+
+  .current{
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .option{
+    font-weight: @fw-medium;
+    padding-left: 11px;
+
+    &.selected{
+      font-weight: @fw-medium;
+    }
+
+    &:hover, &.focus, &.selected.focus{
+      background-color: @c-main-gray;
+    }
+  }
+
+  .list{
+    left: -1px;
+    border: 1px solid @c-minor-gray;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    min-width: 230px;
+    margin-top: 3px;
+  }
+}

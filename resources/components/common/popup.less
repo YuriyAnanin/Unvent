@@ -1,0 +1,61 @@
+.popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &#sertif-popup{
+        max-width: 50vw;
+        margin: 0 auto;
+    }
+
+    &__map{
+        width: 95vw;
+        height: 95vh;
+    }
+
+    &__sertif-img{
+        width: 50vw;
+        height: 95vh;
+        object-fit: contain;
+        cursor: zoom-in;
+    }
+
+    .zoomImg{
+        cursor: zoom-in; 
+    }
+
+    .js_zoom_img{
+        &.is-active{
+            height: 100vh;
+
+            .zoomImg {
+                cursor: zoom-out;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1400px){
+    .popup {
+        &#sertif-popup {
+            max-width: 70vw;
+        }
+
+        &__sertif-img {
+            width: 70vw;
+        }
+    }
+}
+
+@media all and (max-width: 550px) {
+    .popup {
+        &#sertif-popup {
+            max-width: initial;
+        }
+
+        &__sertif-img {
+            width: 100vw;
+            height: 95vh;
+        }
+    }
+}

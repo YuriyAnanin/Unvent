@@ -1,0 +1,31 @@
+.link{
+    color: @c-light-blue;
+    transition: color 0.1s;
+    line-height: @lh-small;
+    font-weight: @fw-bold;
+
+    &:hover, &:focus{
+        outline: none;
+        color: @c-link-hov; 
+    }
+
+    &--db{
+        color: @c-main-blue;
+    }
+
+    &--dg{
+        color: @c-dark-gray;
+    }
+
+    &--lg {
+        color: @c-minor-gray;
+    }
+
+    &--white{
+        color: #ffffff;
+    }
+
+    &--big{
+        font-size: @d-fz-4;
+    }
+}
