@@ -1,0 +1,82 @@
+.members{
+    background-color: #fff;
+
+    &__wrap {
+        padding: 75px 42.5px 87px;
+    }
+
+    &__title {
+        span{
+            background-color: #fff;
+        }
+    }
+
+    &__slider-wrap {
+        margin-top: 95px;
+        max-width: 1140px;
+        margin: 95px auto 0;
+    }
+
+    &__slider {
+        display: flex;
+        height: 194px;
+    }
+
+    &__slide {
+        width: 32%;
+
+        &+&{
+            margin-left: 2.6%;
+        }
+    }
+
+    &__img-wrap{
+        position: relative;
+        max-height: 47px;
+        height: 100%;
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        object-fit: contain;
+    }
+
+    &__slide-desc {
+        position: relative;
+        margin-top: 47px;
+        padding-left: 99px;
+        letter-spacing: 0.4px;
+
+        &:before{
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 71px;
+            height: 2px;
+            background-color: @c-green;
+        }
+    }
+
+    &__slider-bottom {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 64px;
+    }
+
+    &__slider-buttons-wrap {}
+
+    &__slider-button {
+        &--l{}
+
+        &--r{}
+    }
+
+    &__become-member-btn {
+        max-width: 336px;
+        margin-left: 69px;
+    }
+}

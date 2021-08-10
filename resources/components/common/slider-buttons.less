@@ -1,0 +1,40 @@
+.slider-buttons{
+    display: flex;
+}
+
+.slider-button{
+    position: relative;
+    width: 53px;
+    height: 53px;
+    border: 2px solid @c-green;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-repeat: no-repeat; 
+        background-size: cover;
+        width: 5px;
+        height: 9px;
+    }
+
+    &+&{
+        margin-left: 18px;
+    }
+
+    &--l{
+        &:before {
+            background-image: url(../img/arrow-l.png);
+        } 
+    }
+
+    &--r{
+        &:before {
+            background-image: url(../img/arrow-r.png);
+        }
+    }
+}

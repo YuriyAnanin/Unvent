@@ -2,45 +2,45 @@
     position: relative;
     z-index: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    color: #ffffff;
-    transition: .1s;
+    border: 2px solid @c-green;
+    border-radius: 35px;
+    color: @c-green;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: .3s;
     user-select: none;
     white-space: nowrap;
     cursor: pointer;
     outline: none;
     overflow: hidden;
+    width: 100%;
+    height: 53px; 
 
-    &:before{
+    span{
+        font-weight: @fw-bold;
+        margin-left: 36px;
+    }
+
+    &:after{
         content: '';
-        z-index: -1;
         position: absolute;
-        top: 0;
-        animation: moveLine 4s infinite;
-        left: -2vw;
-        width: 2vw;
-        height: 100%;
-        background-color: rgba(#fff, 0.8);
-        transform: translateX(-4vw) skewX(-45deg);
-        transition: 2s;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 27px;
+        width: 5px;
+        height: 9px;
+        background-image: url(../img/arrow-r.png);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-}
 
-@keyframes moveLine{
-    from{
-        transform: translateX(-4vw) skewX(-45deg);
-    }
-    
-    to{
-        transform: translateX(100vw) skewX(-45deg);
-    }
-}
-
-@media all and(max-width: 550px){
-    .btn {
-        &:before {
-            width: 20px;
+    &--painted{
+        color: #fff;
+        background-color: @c-green;
+        &:after {
+            background-image: url(../img/arrow-r-w.png);
         }
     }
 }
